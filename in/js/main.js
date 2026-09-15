@@ -273,8 +273,8 @@ const projectDetails = {
     },
 
     project2: {
-    title: 'Photography Portfolio Website',
-    fullDescription: `
+        title: 'Photography Portfolio Website',
+        fullDescription: `
         <h2>📸 Photography Portfolio Website</h2>
         <img src="assets/images/photography.png" alt="Photography Website" 
              style="width:55%; display:block; margin:20px auto; border-radius:12px;">
@@ -305,31 +305,47 @@ const projectDetails = {
         and responsive behavior across different screen sizes using CSS and JavaScript.
         </p>
     `,
-    github: '#',
-    demo: '#'
-},
-    project3: {
-        title: 'E-Commerce Recommendation System',
-        fullDescription: `
-            <h2>E-Commerce Recommendation Engine</h2>
-            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=500&fit=crop" alt="E-Commerce" style="width:100%; border-radius:12px; margin:20px 0;">
-            <h3>Overview</h3>
-            <p>An intelligent recommendation engine that analyzes user behavior and preferences to suggest personalized product recommendations using collaborative filtering algorithms.</p>
-            <h3>Key Features</h3>
-            <ul>
-                <li>🛒 <strong>Collaborative Filtering</strong>: User-based and item-based recommendations</li>
-                <li>📈 <strong>Behavior Analysis</strong>: Tracks browsing and purchase patterns</li>
-                <li>🎯 <strong>Personalization</strong>: Tailored product suggestions</li>
-                <li>⚡ <strong>Real-Time</strong>: Dynamic recommendation updates</li>
-            </ul>
-            <h3>Tech Stack</h3>
-            <p><strong>ML:</strong> Python, Collaborative Filtering, Matrix Factorization<br>
-            <strong>Data Processing:</strong> Pandas, NumPy<br>
-            <strong>Backend:</strong> Flask</p>
-            <h3>Impact</h3>
-            <p>Significantly improves user engagement and conversion rates by surfacing relevant products based on individual preferences and similar user behaviors.</p>
-        `,
         github: '#',
+        demo: '#'
+    },
+    project3: {
+        title: 'PrepGenius AI',
+        fullDescription: `
+        <h2>🤖 PrepGenius AI</h2>
+        <img src="assets/images/PrepGenius.png" alt="PrepGenius AI" style="width:100%; border-radius:12px; margin:20px 0;">
+        
+        <h3>Overview</h3>
+        <p>An AI-powered study assistant that helps students learn from their study materials. Users can upload PDF documents and use AI-powered features such as Q&A, automated notes, MCQs, flashcards, and interview preparation.</p>
+        
+        <h3>Key Features</h3>
+        <ul>
+            <li>📄 <strong>PDF Processing</strong>: Extracts text from uploaded PDF study materials</li>
+            <li>💬 <strong>AI Q&A</strong>: Ask questions and get answers based on uploaded study material</li>
+            <li>📝 <strong>AI Notes</strong>: Generates concise and useful study notes</li>
+            <li>❓ <strong>MCQ Generation</strong>: Creates multiple-choice questions for practice</li>
+            <li>🃏 <strong>Flashcards</strong>: Generates flashcards for quick revision</li>
+            <li>🎯 <strong>Interview Preparation</strong>: Provides AI-powered interview preparation content</li>
+            <li>🎙️ <strong>Audio/Video Processing</strong>: Converts audio and video speech into text using Whisper and FFmpeg</li>
+            <li>🔐 <strong>Authentication</strong>: JWT-based user authentication and protected API access</li>
+        </ul>
+        
+        <h3>Tech Stack</h3>
+        <p>
+            <strong>Frontend:</strong> React.js, JavaScript, Vite, CSS<br>
+            <strong>Backend:</strong> Python, Django, Django REST Framework<br>
+            <strong>AI:</strong> Groq API, LLM, Whisper<br>
+            <strong>Database:</strong> SQLite<br>
+            <strong>Processing:</strong> pdfplumber, FFmpeg<br>
+            <strong>Authentication:</strong> JWT
+        </p>
+        
+        <h3>How It Works</h3>
+        <p>The user uploads study material through the React frontend. The Django REST API processes the uploaded content and extracts text from PDFs using pdfplumber. Audio and video files can be processed using FFmpeg and Whisper for speech-to-text conversion. The processed content is then sent to the Groq API, where the AI generates answers, notes, MCQs, flashcards, or interview preparation content. The generated results are returned through the REST API and displayed in the React dashboard.</p>
+        
+        <h3>Project Highlights</h3>
+        <p>Demonstrates full-stack development, REST API integration, JWT authentication, AI/LLM integration, document processing, speech-to-text processing, and interactive frontend development.</p>
+    `,
+        github: 'https://github.com/rahulpatil127',
         demo: '#'
     },
     project4: {
@@ -432,21 +448,21 @@ if (contactForm) {
                 'Accept': 'application/json'
             }
         })
-        .then(response => {
-            if (response.ok) {
-                alert("✅ Message sent successfully!");
-                contactForm.reset();
+            .then(response => {
+                if (response.ok) {
+                    alert("✅ Message sent successfully!");
+                    contactForm.reset();
 
-                // close modal
-                contactModal.classList.remove("active");
-                document.body.style.overflow = "auto";
-            } else {
-                alert("❌ Something went wrong!");
-            }
-        })
-        .catch(error => {
-            alert("❌ Error sending message!");
-        });
+                    // close modal
+                    contactModal.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                } else {
+                    alert("❌ Something went wrong!");
+                }
+            })
+            .catch(error => {
+                alert("❌ Error sending message!");
+            });
     });
 }
 
