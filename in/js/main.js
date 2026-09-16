@@ -312,7 +312,7 @@ const projectDetails = {
         title: 'PrepGenius AI',
         fullDescription: `
         <h2>🤖 PrepGenius AI</h2>
-        <img src="assets/images/PrepGenius.png" alt="PrepGenius AI" style="width:100%; border-radius:12px; margin:20px 0;">
+        <img src="assets/images/PrepGenius_ai.png" alt="PrepGenius AI" style="width:100%; border-radius:12px; margin:20px 0;">
         
         <h3>Overview</h3>
         <p>An AI-powered study assistant that helps students learn from their study materials. Users can upload PDF documents and use AI-powered features such as Q&A, automated notes, MCQs, flashcards, and interview preparation.</p>
